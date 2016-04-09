@@ -1,0 +1,97 @@
+﻿ /* start of adding font */
+@font-face {
+  font-family: 'b nazanin';
+  src: url('../fonts/BNazanin.eot?#') format('eot'),  /* IE6–8 */
+       url('../fonts/BNazanin.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('../fonts/BNazanin.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+/* end of adding font */
+
+.menu_block  {
+	position: relative;
+	z-index: 999;
+	float: left;
+	padding-top: 50px;
+	margin-right:20px;
+}
+nav>.sf-menu {
+
+}
+nav {
+    position: relative;
+    margin-top:49px; /*بالا پایین کردن منوها*/
+}
+.sf-menu ul {position:absolute;top:-999px; display:none;/* left offset of submenus need to match (see below) */}
+
+.sf-menu>li {
+	position: relative;
+	float: left;
+    margin-left:3px;
+    border-right:1px solid #000;
+}
+
+.sf-menu>li+li {
+	
+}
+
+
+.sf-menu>li>a{
+	font-size: 16px;
+	font-weight:800;
+	font-family: b nazanin,'Open Sans Condensed', sans-serif;
+	color: #fff;
+	display: block;
+	text-transform: uppercase;
+	position: relative;
+	line-height: 16px;
+	z-index: 999;
+	position: relative;
+	padding: 12px 5px 12px;
+}
+
+
+.sf-menu>li.sfHover>a, .sf-menu>li.current>a, .sf-menu>li:hover>a:hover ,.sf-menu #menu_active a {
+	background-color: #fd9220;
+}
+
+
+
+/*================================>> 2 Level <<========================================*/
+.sf-menu li ul,.sf-menu li.sfHover>ul{
+	top:50px;
+	/*left: 114px;*/
+    min-width:220px;
+	z-index: 999; 
+	background-color: #ffffff;
+    padding:28px 15px 23px 15px;
+    text-align:right;
+    direction:rtl;
+}
+
+
+.sf-menu li ul li{
+	padding-left: 18px;
+	float: none !important; 
+	margin-bottom: 3px;
+    line-height:25px;
+}
+
+
+.sf-menu li ul li a{
+	text-transform: uppercase;
+	font: 11px/16px 'tahoma', sans-serif;
+	position: relative;
+	color: #000;
+}
+
+.sf-menu li li a:hover, 
+.sf-menu li.sfHover li.sfHover>a {  
+	color: #fff;
+    font-size:12px;
+    background-color:#e87b06;
+    padding:5px;
+
+}
+
+
+

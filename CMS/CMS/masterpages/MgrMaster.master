@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MgrMaster" Codebehind="MgrMaster.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="../css/MgrMasterStyle.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/Style.css" type="text/css" media="screen" />
+    <script lang="javascript" type="text/javascript" src="../js/jquery-1.6.3.min.js"></script>
+    <script lang="javascript" type="text/javascript" src="../js/superfish.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".box .h_title").not(this).next("ul").hide("normal");
+            $(".box .h_title").not(this).next(".home").show("normal");
+            $(".box").children(".h_title").click(function () { $(this).next("ul").slideToggle(); });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <meta name="robots" content="nosnippet">
+        <meta name="description" content="پرتال اطلاع رسانی، شما می توانید از آخرین اخبار و اطلاعیه های ما در اینجا با خبر گردید" >
+        <meta name="keywords" content="پیوند سیستم، گروه نرم افزاری، گسترش سامانه پیوند، طراحی وب سای متفاوت">
+        <meta name="author" content="پیوند سیستم">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="main">
+        <form id="form1" runat="server">
+
+        <div id="head_bar">
+            <div class="NavIconName">
+                <p style="margin: 12px 10px 0 0;">
+                    کنترل پنل مدیریت</p>
+                <p>
+                    <asp:Label ID="lblTitle" runat="server" CssClass="Title"></asp:Label>
+                </p>
+            </div>
+            <div id="Nav2">
+                <div id="nav">
+                    <ul class="sf-menu right">
+                        <li>
+                            <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="../images/NewDailyMsg.png"
+                                CausesValidation="False" OnClick="ImageButton3_Click" /></li>
+                        <li>
+                            <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="../images/NewItem.png"
+                                CausesValidation="false" OnClick="ImageButton5_Click"></asp:ImageButton>
+                        </li>
+                        <li class="current">
+                            <asp:ImageButton ID="ImageButton1" runat="server" Height="95px" Width="95px" ImageUrl="../images/home.png"
+                                CausesValidation="False" OnClick="ImageButton1_Click" /></li>
+                    </ul>
+                    <ul class="sf-menu left" style="margin: 76px 0 0 10px;">
+                        <li>
+                            <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="../images/exit_Icon.png"
+                                OnClick="ImageButton4_Click" CausesValidation="False" /></li>
+                        <li>
+                            <asp:Image ID="Image2" runat="server" ImageUrl="../images/User_Icon.png" />
+                            <ul class="user">
+                                <li class="color1"><a href="../aspx/ChangeUsername.aspx">تغییر شناسه کاربری</a></li>
+                                <li class="color2"><a href="../aspx/ChangePassword.aspx">تغییر کلمه عبور</a></li>
+                                <li class="color1"><a href="../aspx/ChangeEmail.aspx">تغییر پست الکترونیک</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <asp:Label ID="lblDate" runat="server" Style="margin-left: 20px; font-style: normal;
+                                font-size: 12px"></asp:Label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="navigation">
+            <!-- <TreeNde Text="ویرایش اخبار" Value="ویرایش اخبار" NavigateUrl="~/aspx/ItemsList.aspx?PartID=1 &RefGroup=-1"         
+            < Text="آرشیو خبرها" Value="آرشیو خبرها" NavigateUrl="~/aspx/ItemsList.aspx?PartID=1 &RefGroup=0" -->
+            <div id="sidebar">
+                <div class="box">
+                    <div class="h_title">
+                        &#8250; مدیریت مطالب</div>
+                    <ul class="home">
+                        <li class="b1"><a class="icon Group" href="../panel/ItemsGroup.aspx">گروه بندی
+                            مطالب</a></li>
+                        <li class="b2"><a class="icon addItems" href="../panel/MakeItem.aspx">درج مطلب جدید</a></li>
+                        <li class="b1"><a class="icon EditList" href="../panel/ItemsList.aspx">
+                            جستجو و ویرایش مطالب</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="h_title">
+                        <a class="link" href="../panel/ItemsList.aspx?PartID=4">&#8250; درج مطلب در تابلو اعلانات
+                            تصویری</a></div>
+                </div>
+                <div class="box">
+                    <div class="h_title">
+                        <a class="link" href="../panel/DailyMsg.aspx">&#8250; روزنوشت ها</a></div>
+                </div>
+                <div class="box">
+                    <div class="h_title">
+                        <a class="link" href="../panel/Album.aspx">&#8250; آلبوم تصاویر</a></div>
+                </div>
+                <div class="box">
+                    <div class="h_title">
+                        <a class="link" href="../panel/AddVideo.aspx">&#8250; مدیریت ویدیو ها</a></div>
+                </div>
+                <div class="box">
+                    <div class="h_title">
+                        <a class="link" href="../panel/Links.aspx">&#8250; سایت های مفید</a></div>
+                </div>
+                      <asp:Repeater ID="TablesReapeter" runat="server">
+                                        <ItemTemplate>
+                                            <li>
+                                                <asp:DynamicHyperLink ID="DynamicHyperLink1" Action="ListDetails" runat="server"></asp:DynamicHyperLink>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+            </div>
+        </div>
+        <div id="wrapper_content">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:ContentPlaceHolder ID="TitleContentPH" runat="server">
+                <div id="roadmap">
+                </div>
+                <div class="clear">
+                </div>
+                <div id="title_bar">
+                    <h1>
+                    </h1>
+                    <span></span>
+                </div>
+                <div class="clear">
+                </div>
+                <div id="main_content">
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+    </div>
+    <div class="clear">
+    </div>
+    <footer>
+    </footer>
+    <br />
+</body>
+</html>

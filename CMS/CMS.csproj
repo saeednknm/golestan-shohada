@@ -1,0 +1,967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B66DDE47-E93C-4A92-B0F2-E8A00E9435F9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AccessManagement">
+      <HintPath>..\..\..\Modiriat Gharardadha\AccessManagement\bin\AccessManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="AccessManagementService">
+      <HintPath>..\..\..\..\publish\AccessManagement\bin\AccessManagementService.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_departmentchart.ascx.3bbd1c1b">
+      <HintPath>..\..\..\..\publish\AccessManagement\bin\App_Web_departmentchart.ascx.3bbd1c1b.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_logincontrol.ascx.cc671b29">
+      <HintPath>..\..\..\..\publish\AccessManagement\bin\App_Web_logincontrol.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscdateshow.ascx.cc671b29">
+      <HintPath>..\..\..\..\publish\WebUtility\bin\App_Web_uscdateshow.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="App_Web_uscfileupload.ascx.cc671b29">
+      <HintPath>..\..\..\..\publish\WebUtility\bin\App_Web_uscfileupload.ascx.cc671b29.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicData">
+      <HintPath>..\packages\DynamicData.4.5.0.1112\lib\net45\DynamicData.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageResizer">
+      <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.DynamicData.EFProvider">
+      <HintPath>..\packages\Microsoft.AspNet.DynamicData.EFProvider.6.0.0\lib\net40\Microsoft.AspNet.DynamicData.EFProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.EntityDataSource">
+      <HintPath>..\packages\Microsoft.AspNet.EntityDataSource.6.0.0\lib\net40\Microsoft.AspNet.EntityDataSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.DynamicData.Handlers">
+      <HintPath>..\packages\Microsoft.Web.DynamicData.Handlers.1.1\lib\Microsoft.Web.DynamicData.Handlers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue.ComponentModel.DataAnnotations">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue.Web">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue.Web.DynamicData">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.Web.DynamicData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TimePicker">
+      <HintPath>..\packages\TimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="tkvUtility">
+      <HintPath>..\..\..\..\component\Utility\bin\x86\Debug\tkvUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebUtility">
+      <HintPath>..\..\..\..\publish\WebUtility\bin\WebUtility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CMS\css\CalendarStyle.css" />
+    <Content Include="CMS\css\MgrLogin_style.css" />
+    <Content Include="CMS\css\MgrMasterStyle.css" />
+    <Content Include="CMS\css\Style.css" />
+    <Content Include="CMS\fonts\WebYekan.svg" />
+    <Content Include="CMS\images\Add.png" />
+    <Content Include="CMS\images\bg_box_head.jpg" />
+    <Content Include="CMS\images\bg_box_head_hover.jpg" />
+    <Content Include="CMS\images\bg_MgrLogin.png" />
+    <Content Include="CMS\images\bg_top.png" />
+    <Content Include="CMS\images\bg_top1.jpg" />
+    <Content Include="CMS\images\Board_Icon.png" />
+    <Content Include="CMS\images\bullet1.png" />
+    <Content Include="CMS\images\Confirm.png" />
+    <Content Include="CMS\images\content-bg.jpg" />
+    <Content Include="CMS\images\delete.png" />
+    <Content Include="CMS\images\Delete2.png" />
+    <Content Include="CMS\images\download.png" />
+    <Content Include="CMS\images\dropcap1.gif" />
+    <Content Include="CMS\images\Edit.png" />
+    <Content Include="CMS\images\error.png" />
+    <Content Include="CMS\images\exit.png" />
+    <Content Include="CMS\images\exit_Icon.png" />
+    <Content Include="CMS\images\gradient.png" />
+    <Content Include="CMS\images\gradient1.png" />
+    <Content Include="CMS\images\home.png" />
+    <Content Include="CMS\images\Icon.png" />
+    <Content Include="CMS\images\Icon_activities.png" />
+    <Content Include="CMS\images\Icon_Download.png" />
+    <Content Include="CMS\images\Icon_news.png" />
+    <Content Include="CMS\images\i_addItems.png" />
+    <Content Include="CMS\images\i_category.png" />
+    <Content Include="CMS\images\i_EditList.png" />
+    <Content Include="CMS\images\lightbox-blank.gif" />
+    <Content Include="CMS\images\lightbox-btn-close.gif" />
+    <Content Include="CMS\images\lightbox-btn-next.gif" />
+    <Content Include="CMS\images\lightbox-btn-prev.gif" />
+    <Content Include="CMS\images\lightbox-ico-loading.gif" />
+    <Content Include="CMS\images\List.png" />
+    <Content Include="CMS\images\menu_icon1.gif" />
+    <Content Include="CMS\images\menu_icon1_active.gif" />
+    <Content Include="CMS\images\menu_icon2.gif" />
+    <Content Include="CMS\images\menu_icon2_active.gif" />
+    <Content Include="CMS\images\menu_icon3.gif" />
+    <Content Include="CMS\images\menu_icon3_active.gif" />
+    <Content Include="CMS\images\menu_icon4.gif" />
+    <Content Include="CMS\images\menu_icon4_active.gif" />
+    <Content Include="CMS\images\menu_icon5.gif" />
+    <Content Include="CMS\images\menu_icon5_active.gif" />
+    <Content Include="CMS\images\menu_icon6.png" />
+    <Content Include="CMS\images\menu_icon6_active.png" />
+    <Content Include="CMS\images\nav_control.jpg" />
+    <Content Include="CMS\images\nav_control.png" />
+    <Content Include="CMS\images\nav_control_hover.jpg" />
+    <Content Include="CMS\images\nav_control_hover.png" />
+    <Content Include="CMS\images\newBoardNews.png" />
+    <Content Include="CMS\images\NewDailyMsg.png" />
+    <Content Include="CMS\images\NewItem.png" />
+    <Content Include="CMS\images\next.png" />
+    <Content Include="CMS\images\pagin-1.png" />
+    <Content Include="CMS\images\pagin-2.png" />
+    <Content Include="CMS\images\pagin-3.png" />
+    <Content Include="CMS\images\pagin-4.png" />
+    <Content Include="CMS\images\pagination-a.png" />
+    <Content Include="CMS\images\pass-icon.png" />
+    <Content Include="CMS\images\photoList.png" />
+    <Content Include="CMS\images\previous.png" />
+    <Content Include="CMS\images\Seprator.jpg" />
+    <Content Include="CMS\images\user-icon.png" />
+    <Content Include="CMS\images\User.png" />
+    <Content Include="CMS\images\User_Icon.png" />
+    <Content Include="CMS\js\jquery-1.6.3.min.js" />
+    <Content Include="CMS\js\superfish.js" />
+    <Content Include="CMS\js\tinymce\license.txt" />
+    <Content Include="CMS\js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="CMS\js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\example\dialog.html" />
+    <Content Include="CMS\js\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="CMS\js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="CMS\js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="CMS\js\tinymce\themes\modern\theme.min.js" />
+    <Content Include="CMS\js\tinymce\tinymce.min.js" />
+    <Content Include="CMS\panel\AddPicture.aspx" />
+    <Content Include="CMS\panel\AddVideo.aspx" />
+    <Content Include="CMS\panel\Album.aspx" />
+    <Content Include="CMS\panel\AlbumPictureList.aspx" />
+    <Content Include="CMS\panel\ChangeEmail.aspx" />
+    <Content Include="CMS\panel\ChangePassword.aspx" />
+    <Content Include="CMS\panel\ChangeUsername.aspx" />
+    <Content Include="CMS\panel\DailyMsg.aspx" />
+    <Content Include="CMS\panel\ItemsGroup.aspx" />
+    <Content Include="CMS\panel\ItemsList.aspx" />
+    <Content Include="CMS\panel\Links.aspx" />
+    <Content Include="CMS\panel\MakeItem.aspx" />
+    <Content Include="CMS\panel\MakeResume.aspx" />
+    <Content Include="CMS\panel\MgrLogin.aspx" />
+    <Content Include="CMS\panel\MgrPanel.aspx" />
+    <Content Include="CMS\panel\PictureBoard.aspx" />
+    <Content Include="css\CalendarStyle.css" />
+    <Content Include="css\Home_Component.css" />
+    <Content Include="css\Home_layout.css" />
+    <Content Include="css\Home_reset.css" />
+    <Content Include="css\Home_style%28OLD%29.css" />
+    <Content Include="css\Home_style.css" />
+    <Content Include="css\jquery.lightbox-0.5.css" />
+    <Content Include="css\MgrLogin_style.css" />
+    <Content Include="css\MgrMasterStyle.css" />
+    <Content Include="css\Style.css" />
+    <Content Include="css_Alemtabriz\grid.css" />
+    <Content Include="css_Alemtabriz\Home_Component.css" />
+    <Content Include="css_Alemtabriz\ie.css" />
+    <Content Include="css_Alemtabriz\reset.css" />
+    <Content Include="css_Alemtabriz\style.css" />
+    <Content Include="css_Alemtabriz\superfish.css" />
+    <Content Include="Default6.aspx" />
+    <Content Include="DynamicData\Content\GridViewPager.ascx" />
+    <Content Include="DynamicData\Content\Images\Back.gif" />
+    <Content Include="DynamicData\Content\Images\header_back.gif" />
+    <Content Include="DynamicData\Content\Images\PgFirst.gif" />
+    <Content Include="DynamicData\Content\Images\PgLast.gif" />
+    <Content Include="DynamicData\Content\Images\PgNext.gif" />
+    <Content Include="DynamicData\Content\Images\PgPrev.gif" />
+    <Content Include="DynamicData\Content\Images\plus.gif" />
+    <Content Include="DynamicData\EntityTemplates\Default.ascx" />
+    <Content Include="DynamicData\EntityTemplates\Default_Edit.ascx" />
+    <Content Include="DynamicData\EntityTemplates\Default_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Image.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Image_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Integer_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ManyToMany.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
+    <Content Include="DynamicData\PageTemplates\Details.aspx" />
+    <Content Include="DynamicData\PageTemplates\Edit.aspx" />
+    <Content Include="DynamicData\PageTemplates\Insert.aspx" />
+    <Content Include="DynamicData\PageTemplates\List.aspx" />
+    <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
+    <Content Include="fa\Album.aspx" />
+    <Content Include="fa\Contact.aspx" />
+    <Content Include="fa\PartList.aspx" />
+    <Content Include="fa\ReadItem.aspx" />
+    <Content Include="fa\Resume.aspx" />
+    <Content Include="fonts\WebYekan.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\Add.png" />
+    <Content Include="images\banner-bg.png" />
+    <Content Include="images\banner-bg1.png" />
+    <Content Include="images\bg_bot.jpg" />
+    <Content Include="images\bg_box_head.jpg" />
+    <Content Include="images\bg_box_head_hover.jpg" />
+    <Content Include="images\bg_img2.jpg" />
+    <Content Include="images\bg_MgrLogin.png" />
+    <Content Include="images\bg_MgrLogin1.png" />
+    <Content Include="images\bg_top.jpg" />
+    <Content Include="images\Board_Icon.png" />
+    <Content Include="images\bullet1.png" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\Confirm.png" />
+    <Content Include="images\content-bg.jpg" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\Delete2.png" />
+    <Content Include="images\download.png" />
+    <Content Include="images\dropcap1.gif" />
+    <Content Include="images\Edit.png" />
+    <Content Include="images\eng-bullet1.png" />
+    <Content Include="images\eng-Icon.png" />
+    <Content Include="images\error.png" />
+    <Content Include="images\exit.png" />
+    <Content Include="images\exit_Icon.png" />
+    <Content Include="images\Falg_farsi.png" />
+    <Content Include="images\Flag_eng.png" />
+    <Content Include="images\gradient.png" />
+    <Content Include="images\gradient1.png" />
+    <Content Include="images\h3_bg.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\Icon.png" />
+    <Content Include="images\Icon_activities.png" />
+    <Content Include="images\Icon_Download.png" />
+    <Content Include="images\Icon_news.png" />
+    <Content Include="images\i_addItems.png" />
+    <Content Include="images\i_category.png" />
+    <Content Include="images\i_EditList.png" />
+    <Content Include="images\lightbox-blank.gif" />
+    <Content Include="images\lightbox-btn-close.gif" />
+    <Content Include="images\lightbox-btn-next.gif" />
+    <Content Include="images\lightbox-btn-prev.gif" />
+    <Content Include="images\lightbox-ico-loading.gif" />
+    <Content Include="images\List.png" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo1.jpg" />
+    <Content Include="images\menu_icon1.gif" />
+    <Content Include="images\menu_icon1_active.gif" />
+    <Content Include="images\menu_icon2.gif" />
+    <Content Include="images\menu_icon2_active.gif" />
+    <Content Include="images\menu_icon3.gif" />
+    <Content Include="images\menu_icon3_active.gif" />
+    <Content Include="images\menu_icon4.gif" />
+    <Content Include="images\menu_icon4_active.gif" />
+    <Content Include="images\menu_icon5.gif" />
+    <Content Include="images\menu_icon5_active.gif" />
+    <Content Include="images\menu_icon6.png" />
+    <Content Include="images\menu_icon6_active.png" />
+    <Content Include="images\nav_control.jpg" />
+    <Content Include="images\nav_control.png" />
+    <Content Include="images\nav_control_hover.jpg" />
+    <Content Include="images\nav_control_hover.png" />
+    <Content Include="images\newBoardNews.png" />
+    <Content Include="images\NewDailyMsg.png" />
+    <Content Include="images\NewItem.png" />
+    <Content Include="images\next.png" />
+    <Content Include="images\pagin-1.png" />
+    <Content Include="images\pagin-2.png" />
+    <Content Include="images\pagin-3.png" />
+    <Content Include="images\pagin-4.png" />
+    <Content Include="images\pagination-a.png" />
+    <Content Include="images\pagination-a2.png" />
+    <Content Include="images\pass-icon.png" />
+    <Content Include="images\photoList.png" />
+    <Content Include="images\previous.png" />
+    <Content Include="images\prevnext.png" />
+    <Content Include="images\Seprator.jpg" />
+    <Content Include="images\slider-bg.png" />
+    <Content Include="images\slider-bg1.png" />
+    <Content Include="images\slider-bg11.png" />
+    <Content Include="images\slider-img1.jpg" />
+    <Content Include="images\slider-img11.jpg" />
+    <Content Include="images\slider-img2.jpg" />
+    <Content Include="images\slider-img3.jpg" />
+    <Content Include="images\user-icon.png" />
+    <Content Include="images\User.png" />
+    <Content Include="images\User_Icon.png" />
+    <Content Include="js\calendar.js" />
+    <Content Include="js\jquery-1.6.3.min.js" />
+    <Content Include="js\jquery.carouFredSel-6.1.0-packed.js" />
+    <Content Include="js\jquery.lightbox-0.5.js" />
+    <Content Include="js\jquery.lightbox-0.5.min.js" />
+    <Content Include="js\jquery.lightbox-0.5.pack.js" />
+    <Content Include="js\superfish.js" />
+    <Content Include="js\Ticker.js" />
+    <Content Include="js\TimePicker.js" />
+    <Content Include="js\tms-0.3.js" />
+    <Content Include="js\tms_presets.js" />
+    <Content Include="Panel.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DynamicDataConfig.cs" />
+    <Compile Include="CMS\masterpages\MgrMaster.master.cs">
+      <DependentUpon>MgrMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\masterpages\MgrMaster.master.designer.cs">
+      <DependentUpon>MgrMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\AddPicture.aspx.cs">
+      <DependentUpon>AddPicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\AddPicture.aspx.designer.cs">
+      <DependentUpon>AddPicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\AddVideo.aspx.cs">
+      <DependentUpon>AddVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\AddVideo.aspx.designer.cs">
+      <DependentUpon>AddVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\Album.aspx.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\Album.aspx.designer.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\AlbumPictureList.aspx.cs">
+      <DependentUpon>AlbumPictureList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\AlbumPictureList.aspx.designer.cs">
+      <DependentUpon>AlbumPictureList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\ChangeEmail.aspx.cs">
+      <DependentUpon>ChangeEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\ChangeEmail.aspx.designer.cs">
+      <DependentUpon>ChangeEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\ChangeUsername.aspx.cs">
+      <DependentUpon>ChangeUsername.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\ChangeUsername.aspx.designer.cs">
+      <DependentUpon>ChangeUsername.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\DailyMsg.aspx.cs">
+      <DependentUpon>DailyMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\DailyMsg.aspx.designer.cs">
+      <DependentUpon>DailyMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\ItemsGroup.aspx.cs">
+      <DependentUpon>ItemsGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\ItemsGroup.aspx.designer.cs">
+      <DependentUpon>ItemsGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\ItemsList.aspx.cs">
+      <DependentUpon>ItemsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\ItemsList.aspx.designer.cs">
+      <DependentUpon>ItemsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\Links.aspx.cs">
+      <DependentUpon>Links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\Links.aspx.designer.cs">
+      <DependentUpon>Links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\MakeItem.aspx.cs">
+      <DependentUpon>MakeItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\MakeItem.aspx.designer.cs">
+      <DependentUpon>MakeItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\MakeResume.aspx.cs">
+      <DependentUpon>MakeResume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\MakeResume.aspx.designer.cs">
+      <DependentUpon>MakeResume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\MgrLogin.aspx.cs">
+      <DependentUpon>MgrLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\MgrLogin.aspx.designer.cs">
+      <DependentUpon>MgrLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\MgrPanel.aspx.cs">
+      <DependentUpon>MgrPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\MgrPanel.aspx.designer.cs">
+      <DependentUpon>MgrPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMS\panel\PictureBoard.aspx.cs">
+      <DependentUpon>PictureBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMS\panel\PictureBoard.aspx.designer.cs">
+      <DependentUpon>PictureBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default6.aspx.designer.cs">
+      <DependentUpon>Default6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.designer.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.designer.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.designer.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.designer.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.designer.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.designer.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.designer.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.designer.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.designer.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Image.ascx.cs">
+      <DependentUpon>Image.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Image.ascx.designer.cs">
+      <DependentUpon>Image.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Image_Edit.ascx.cs">
+      <DependentUpon>Image_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Image_Edit.ascx.designer.cs">
+      <DependentUpon>Image_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.designer.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.designer.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.designer.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.designer.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.designer.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.designer.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fa\Album.aspx.designer.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fa\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fa\PartList.aspx.designer.cs">
+      <DependentUpon>PartList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fa\ReadItem.aspx.designer.cs">
+      <DependentUpon>ReadItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fa\Resume.aspx.designer.cs">
+      <DependentUpon>Resume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\WebMaster.master.designer.cs">
+      <DependentUpon>WebMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="CMSLogic\MyClass.cs" />
+    <Compile Include="Default6.aspx.cs">
+      <DependentUpon>Default6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fa\Album.aspx.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fa\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fa\PartList.aspx.cs">
+      <DependentUpon>PartList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fa\ReadItem.aspx.cs">
+      <DependentUpon>ReadItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fa\Resume.aspx.cs">
+      <DependentUpon>Resume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\WebMaster.master.cs">
+      <DependentUpon>WebMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panel.aspx.cs">
+      <DependentUpon>Panel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panel.aspx.designer.cs">
+      <DependentUpon>Panel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\BNazanin.eot" />
+    <Content Include="fonts\BNazanin.ttf" />
+    <Content Include="fonts\BNazanin.woff" />
+    <Content Include="fonts\WebYekan.eot" />
+    <Content Include="fonts\WebYekan.ttf" />
+    <Content Include="fonts\WebYekan.woff" />
+    <Content Include="MasterPages\WebMaster.master" />
+    <Content Include="packages.config" />
+    <Content Include="CMS\fonts\BNazanin.eot" />
+    <Content Include="CMS\fonts\BNazanin.ttf" />
+    <Content Include="CMS\fonts\BNazanin.woff" />
+    <Content Include="CMS\fonts\WebYekan.eot" />
+    <Content Include="CMS\fonts\WebYekan.ttf" />
+    <Content Include="CMS\fonts\WebYekan.woff" />
+    <Content Include="CMS\js\tinymce\langs\readme.md" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="CMS\js\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="CMS\masterpages\MgrMaster.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CMS\files\Album\" />
+    <Folder Include="CMS\files\photoItems\" />
+    <Folder Include="CMS\files\Resume\" />
+    <Folder Include="CMS\files\UploadFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Golestan\Golestan.csproj">
+      <Project>{d856aa46-0e36-4f13-b330-9401b74d0fdc}</Project>
+      <Name>Golestan</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:46375/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

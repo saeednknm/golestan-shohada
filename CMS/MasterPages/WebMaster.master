@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterPages_WebMaster" Codebehind="WebMaster.master.cs" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/Home_reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/Home_layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/Home_Style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/Home_Component.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/Style.css" type="text/css" media="all">
+    <script src="../js/jquery-1.6.3.min.js" type="text/javascript"></script>
+    <script src="../js/superfish.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
+	<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="page1">
+    <form id="form1" runat="server">
+    <div class="body1">
+        <div class="main">
+            <!-- header -->
+            <header>
+                <div class="wrapper">
+                    <div class="left">
+                        <nav>
+                            <table><tr><td><a href="http://www.kouroshfathi.com">
+                            <img alt="سهراب کیوانی" title="فارسی" src="images/Falg_farsi.png" /></a></td><td><a href="#">
+                            <img alt="sohrab keyvani" title="english" src="images/Flag_eng.png" /></a></td></tr></table>
+                            <ul class="sf-menu">
+                                <li><a href="../Professor/Contact.aspx">ارتباط با ما</a></li>
+                                <li><a href="../Professor/Resume.aspx">درباره ما</a></li>
+                                <li><a href="../Professor/Album.aspx">آلبوم تصاویر</a></li>
+                                <li><a href="../Professor/PartList.aspx?PartiD=2">دریافت فایل</a>
+                                    <ul class="Download">
+                                        <asp:DataList ID="dtListDownload" runat="server">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="Hypink" NavigateUrl='<%# "../Professor/PartList.aspx?GrpiD="+ DataBinder.Eval(Container.DataItem, "GrpID") %>'
+                                                        Text='<%# DataBinder.Eval(Container.DataItem, "GrpName") %>'></asp:HyperLink></li>
+                                            </ItemTemplate>
+                                        </asp:DataList>
+                                    </ul>
+                                </li>
+                                <li><a href="../Professor/PartList.aspx?PartiD=3">معرفی فعالیت ها</a>
+                                    <ul class="News">
+                                        <asp:DataList ID="dtListActivity" runat="server">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="Hypink" NavigateUrl='<%# "../Professor/PartList.aspx?GrpiD="+ DataBinder.Eval(Container.DataItem, "GrpID") %>'
+                                                        Text='<%# DataBinder.Eval(Container.DataItem, "GrpName") %>'></asp:HyperLink></li>
+                                            </ItemTemplate>
+                                        </asp:DataList>
+                                    </ul>
+                                </li>
+                                <li><a href="../Professor/PartList.aspx?PartiD=1">آرشیو اخبار</a>
+                                    <ul class="News">
+                                        <asp:DataList ID="dtListNews" runat="server">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="Hypink" NavigateUrl='<%# "../Professor/PartList.aspx?GrpiD="+ DataBinder.Eval(Container.DataItem, "GrpID") %>'
+                                                        Text='<%# DataBinder.Eval(Container.DataItem, "GrpName") %>'></asp:HyperLink>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:DataList>
+                                    </ul>
+                                </li>
+                                <li id="menu_active"><a href="../Default.aspx">صفحه نخست</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="Topic">
+                        <span id="slogan">وب سایت رسمی</span>
+                        <p id="logo">
+                            <asp:Label ID="lblTitle" runat="server" CssClass="Title"></asp:Label>
+                        </p>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- / header -->
+    <div class="main">
+        <!-- content -->
+        <section id="content">
+            <article class="col2 right">
+                <div class="pad_1">
+                    <div class="SingleItem">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </article>
+            <article class="col1">
+                <div class="Left_nav height_300">
+                    <p class="title">
+                        بیشتر بخوانید</p>
+                    <br />
+                    <asp:DataList ID="DataList2" runat="server" CssClass="dtlistLeft">
+                        <ItemTemplate>
+                            <asp:Image ID="Image2" runat="server" ImageUrl="~/images/bullet1.png" />&nbsp;<asp:HyperLink
+                                ID="HyperLink4" runat="server" CssClass="HyplnkMore" NavigateUrl='<%# "../Professor/ReadItem.aspx?itemId="+ DataBinder.Eval(Container.DataItem, "ItemID") %>'
+                                Text='<%# DataBinder.Eval(Container.DataItem, "ItemTopic") %>'></asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+                <div class="cleaner">
+                </div>
+                <div class="Left_nav height_200">
+                    <p class="title">
+                        پیوند ها</p>
+                    <br />
+                    <asp:DataList ID="dtListLink" runat="server" CssClass="dtlistLeft">
+                        <ItemTemplate>
+                            <asp:Image ID="Image2" runat="server" ImageUrl="~/images/bullet1.png" />&nbsp;<asp:HyperLink
+                                ID="HyperLink4" runat="server" Target="_blank" CssClass="HyplnkMore" NavigateUrl='<%# "http://"+ DataBinder.Eval(Container.DataItem, "LinkURL") %>'
+                                Text='<%# DataBinder.Eval(Container.DataItem, "LinkTitle") %>'></asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+            </article>
+        </section>
+        <!-- / content -->
+    </div>
+    <div class="body3">
+        <div class="main">
+            <!-- footer -->
+            <footer>
+                <div class="copyright">
+                    <div class="copyright">
+                        <a href="http://linksystem.ir/" rel="nofollow" target="_blank" style="text-decoration: none;">
+                            طراحی شده توسط شرکت پیشگامان گسترش سامانه پیوند &copy;</a>
+                    </div>
+                </div>
+            </footer>
+            <!-- / footer -->
+        </div>
+    </div>
+    </form>
+</body>
+</html>

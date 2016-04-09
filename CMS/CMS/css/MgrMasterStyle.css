@@ -1,0 +1,380 @@
+﻿@font-face
+{
+    font-family: 'b nazanin';
+    src: url('../fonts/BNazanin.eot?#') format('eot'), /* IE6–8 */ url('../fonts/BNazanin.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/BNazanin.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+html, body
+{
+    height: 100%;
+}
+body
+{
+    background: #fff;
+    color: #000;
+    font-family: tahoma,Arial;
+    font-size: 14px;
+    line-height: 1em;
+}
+/*=====================*/
+h1
+{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #000;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+h1:hover
+{
+    color: Red;
+}
+span
+{
+    font-size: 10px;
+    font-style: italic;
+    color: #000;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+
+/* ====================*/
+
+#main
+{
+    margin: 0 auto;
+    max-width: 1260px;
+    min-width: 850px;
+    position: relative;
+}
+#head_bar
+{
+    width: 100%;
+    height: 100px;
+    background-color: #ffbf1e;
+}
+.NavIconName
+{
+    width: 23%;
+    height: 100%;
+    margin-left: 3px;
+    float: right;
+    text-align: right;
+    direction: rtl;
+    font: 14px b nazanin,tahoma;
+}
+.NavIconName .Title
+{
+    font: 18px b nazanin,tahoma;
+    font-weight: 700;
+    margin-right: 20px;
+}
+#navigation
+{
+    margin: 0 auto;
+    width: 23%;
+    position: relative;
+    float: right;
+    background-color: #313131;
+    text-align: right;
+    direction: rtl;
+}
+.tree
+{
+    color: White;
+}
+#wrapper_content
+{
+    margin: 0 auto;
+    width: 77%;
+    position: relative;
+    float: left;
+}
+#roadmap
+{
+    height: 25px;
+    background-color: #dddddd;
+}
+#title_bar
+{
+    height: 30px;
+    background-color: #ffffff;
+    text-align: right;
+    direction: rtl;
+    padding: 25px 15px 20px 0px;
+}
+#icon_bar
+{
+    height: 100px;
+}
+#main_content
+{
+    text-align: right;
+    direction: rtl;
+}
+footer
+{
+    margin: 0 auto;
+    max-width: 1260px;
+    min-width: 850px;
+    border-top: 1px solid #926903;
+    height: 30px;
+    margin-top: 5px;
+    background-color: #ffbf1e;
+    display: block;
+    text-align: center;
+    direction: rtl;
+    font: 11px tahoma;
+}
+footer a
+{
+    text-decoration: none;
+}
+.clear
+{
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+
+/********************** Navigation ************************/
+#nav
+{
+    border: 1px solid #dcdcdc;
+    padding: 0;
+}
+.sf-menu
+{
+    min-height: 10px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.sf-menu ul
+{
+    text-align: right;
+    direction: rtl;
+    position: absolute; /*top:-999em;*/
+    width: 200px;
+    left: 0;
+    display: none;
+    background-color: #fff;
+}
+.sf-menu .Items
+{
+    height: auto;
+    width: 400px;
+    margin-top: 57px;
+}
+.sf-menu .user
+{
+    margin-left: 295%;
+    margin-top: -20px;
+    width: 160px;
+}
+
+.sf-menu > li
+{
+    position: relative;
+    display: inline-block;
+    border-left: 1px solid #896f08;
+}
+
+.sf-menu > li:first-child
+{
+    border: none;
+}
+.sf-menu > li > a
+{
+    text-decoration: none;
+    display: block !important;
+    font-family: tahoma, 'Open Sans' , sans-serif;
+    font-size: 13px;
+    line-height: 10px;
+    font-weight: 600;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 35px;
+    position: relative;
+    z-index: 99;
+}
+.sf-menu > li.current > a, .sf-menu > li:hover > a, .sf-menu > li.sfHover > a
+{
+    color: #c7c5c5;
+    text-decoration: none;
+}
+
+.sf-menu li:hover ul, .sf-menu li.sfHover ul
+{
+    top: 42px;
+    left: -300px;
+    z-index: 999;
+}
+.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul
+{
+    top: -999em;
+}
+.sf-menu li.current, .sf-menu li:hover, .sf-menu li.sfHover
+{
+    text-decoration: none;
+}
+.sf-menu li li a
+{
+    display: block;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+    overflow: hidden;
+    padding: 8px 5px 8px 15px;
+    text-transform: lowercase;
+    font-family: tahoma, 'Open Sans' , sans-serif;
+}
+.sf-menu li li > a:hover, .sf-menu li li.sfHover > a, .sf-menu li li.current > a
+{
+    color: #760c99; /*font-weight:bold;*/
+}
+.sf-menu li li
+{
+    float: none;
+    position: relative;
+    margin: 0 0 1px 0;
+}
+
+.sf-menu li ul li:hover
+{
+    background-color: #ffbf1e;
+    border-top: 1px solid #6a4d06;
+}
+.btnGoItems
+{
+    width: 30px;
+    height: 22px;
+    font: 11px tahoma;
+    background-color: #d4c6a3;
+    color: #624705;
+    border: 1px outset #624705;
+}
+.DrpGoItems
+{
+    width: auto;
+    height: 22px;
+    font: 11px tahoma;
+    background-color: #f0ede4;
+    color: #624705;
+    border: 1px outset #624705;
+}
+
+/********** end of Navigation **********/
+
+/* CONTENT SIDEBAR START */
+
+#content #sidebar
+{
+    float: right;
+    margin: 0 20px 0 0;
+    width: 190px;
+}
+#sidebar a
+{
+    font: 11px tahoma;
+    text-decoration: none;
+    color: #fff;
+}
+#sidebar a:hover
+{
+    color: #ffbf1e;
+}
+#sidebar .box
+{
+    border: 1px solid #DCDDE1;
+    margin: 0 0 12px 0;
+    background-color: #3a3a3a;
+}
+#sidebar .box .h_title
+{
+    background: url(../images/bg_box_head.jpg) repeat-x;
+    color: #bebebe;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: normal;
+    height: 22px;
+    padding: 7px 0 0 15px; /*text-shadow: #0E0E0E 0px 1px 1px;*/
+}
+#sidebar .box .h_title:hover
+{
+    background: url(../images/bg_box_head_hover.jpg) repeat-x;
+    color: #000;
+}
+#sidebar .box .h_title .link:hover
+{
+    color: #000;
+}
+#sidebar .box ul
+{
+    list-style: none;
+}
+#sidebar .box ul li
+{
+    padding: 8px 0 8px 5px;
+}
+.box ul li .icon
+{
+    padding: 2px 22px 2px 0;
+}
+.box ul li .Group
+{
+    background: url(../images/i_category.png) no-repeat center right;
+}
+.box ul li .EditList
+{
+    background: url(../images/i_EditList.png) no-repeat center right;
+}
+.box ul li .addItems
+{
+    background: url(../images/i_addItems.png) no-repeat center right;
+}
+
+/* CONTENT SIDEBAR End */
+
+.RemarkDiv
+{
+    float: left;
+    margin: 5px 0px 7px 40px;
+    width: 200px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+}
+.titleremark
+{
+    font: 14px b nazanin,tahoma;
+    font-weight: 700;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 5px;
+}
+.Remarktxt
+{
+    width: 95%;
+    height: 70%;
+    background-color: #f7f1e2;
+    font: 12px tahoma,arial;
+    padding: 5px 10px 5px 5px;
+    border: 1px solid #d7cdb5;
+    border-radius: 9px;
+    margin-bottom: 5px;
+    margin-top:5px;
+}
+
+

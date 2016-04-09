@@ -1,0 +1,197 @@
+﻿.heigh_30{padding:5px 0px 1px 0px;height:30px}
+.heigh_35{padding:3px;height:35px}
+.height_auto{padding:3px;height:auto;}
+.persian{text-align:right;direction:rtl;}
+.english{direction:ltr}
+.row{width:100%;font:12px tahoma,arial;}
+.Rcolumn{width:24%;float:right;text-align:left; direction:rtl;padding-top:7px;}
+.Lcolumn{width:75%;float:left;text-align:right; direction:rtl}
+.Mytxt{width:250px;height:15px;background-color:#f8f5ec;font:12px tahoma,arial;padding:5px 10px 5px 5px;}
+.Mydrp{width:270px;height:25px;background-color:#f8f5ec;font:12px tahoma,arial;}
+.clear_1{clear:both;margin:0;padding:0;height:1px;}
+.first_row{text-align:right;direction:rtl;padding:1%;width:98%;height:12px;font:12px tahoma;}
+.last_row{text-align:center;padding:1% 0% 1% 2%;width:97.5%; float:left;margin-top:5px;}
+.Mybtn{background-color:#d70000;border:1px inset #000;width:80px;height:25px;font:12px tahoma,arial;color:#fff;}
+.Mybtn:hover{background-color:#f70606;color:#000;cursor:pointer;}
+.right{float:right}
+.left{float:left}
+.width_15{width:15%;}
+.width_84{width:84%;}
+.color1{background-color:#f2efe3}
+.color2{background-color:#f6f3db}
+.color3{background-color:#f1ebca}
+.disNone{display:none;height:0;}
+
+/* ====================== start of GridView ===============================*/
+.MyGrid
+{
+	min-width: 70%;
+	max-width:98%;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 1px #525252;
+	border-collapse: collapse;
+	direction: rtl;
+}
+.MyGrid td
+{
+	padding: 2px;
+	border: solid 1px #c1c1c1;
+	color: #4f4f4f;
+	direction:rtl;
+	text-align:center;
+}
+.MyGrid th
+{
+	padding: 4px 2px;
+	color: #fff;
+	background: #76726a;
+	border-left: solid 1px #525252;
+	font:12px tahoma;
+	font-weight:500;
+	direction:rtl;
+	height:25px;
+	text-align:center;
+	border: outset 1px #cf970b;
+}
+.MyGrid .alt
+{
+	background: #fcfcfc;
+}
+.MyGrid .pgr
+{
+	background: #424242;
+}
+.MyGrid .pgr table
+{
+	margin: 5px 0;
+}
+.MyGrid .pgr td
+{
+	border-width: 0;
+	padding: 0 6px;
+	border-left: solid 1px #666;
+	font-weight: bold;
+	color: #fff;
+	line-height: 12px;
+}
+.MyGrid .pgr a
+{
+	color: #666;
+	text-decoration: none;
+}
+.MyGrid .pgr a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
+
+.MyGrid tr.header
+{
+	color: white;
+	background-color: #736e61;
+	height: 25px;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+}
+
+.MyGrid tr.normal
+{
+	color: Yellow;
+	background-color: #FDC64E;
+	height: 25px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.MyGrid tr.alternate
+{
+	color: black;
+	background-color: #D59200;
+	height: 25px;
+	vertical-align: middle;
+	text-align: center;
+}
+.MyGrid tr.normal:hover, .MyGrid tr.alternate:hover
+{
+	background-color: white;
+	color: black;
+	font-weight: bold;
+}
+
+/* ====================== end of GridView ===============================*/
+.errorMSG
+{
+    width: 92%;
+    height: 25px;
+    padding: 5px 50px 0px 0px;
+    margin:5px 40px 15px 0;
+    color: #9e0707;
+    font: 12px Tahoma , Arial, sans-serif;
+    margin-bottom: 5px;
+    text-align: right;
+    direction: rtl;
+    border-radius:5px;
+    background: #fab2b2 url(../images/error.png) no-repeat right;
+}
+.confirmMSG
+{
+    width: 92%;
+    height: 25px;
+    padding: 5px 50px 0px 0px;
+    margin:5px 40px 15px 0;
+    color: #3c7a06;
+    font: 12px Tahoma , Arial, sans-serif;
+    margin-bottom: 5px;
+    text-align: right;
+    direction: rtl;
+    border-radius:5px;
+    background: #b3d892 url(../images/Confirm.png) no-repeat right;
+}
+.RCol2{width:34%;height:auto;float:right;}
+.LCol2{width:65%;height:auto;float:left;}
+h5 .dropcap{float:right;width:56px;height:56px;margin-top:0px;margin-right:10px;background:url(../images/dropcap1.gif) 0 0 no-repeat;color:#fff;text-align:center}
+h5 .dropcap .strong{font-weight:700;font-size:34px;line-height:1.2em;display:block;padding-top:3px;letter-spacing:-2px}
+h5 .dropcap .span{font-weight:400;font-size:16px;line-height:1.2em;display:block;margin-top:-6px}
+
+#DivExDiv
+{
+    width:97%;
+    height:auto;
+}
+.NameCmt
+{
+    width:93%;
+    height:15px;
+    border:1px solid #8800af;
+    border-radius:3px;
+    background-color:#f6f6f6;
+    color:#53056a;
+    font:12px tahoma;
+    padding:2px 5px 2px 0px;
+}
+.BodyCmt
+{
+    text-align:right;
+    direction:rtl;
+    width:80%;
+    height:auto;
+    background-color:#fff;
+    color:#000;
+    font:11px tahoma;
+    padding:12px 15px 5px 3px;
+}
+.DateCmt
+{
+    text-align:left;
+    direction:rtl;
+    width:93%;
+    height:12px;
+    color:#715878;
+    font:10px tahoma;
+    margin:5px 0 25px 0;
+    padding:1px;
+}
+

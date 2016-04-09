@@ -1,0 +1,7 @@
+<configuration>
+    <system.webServer>
+        <handlers>
+            <add name="ImageHandler" path="ImageHandler.ashx" verb="*" type="Microsoft.Web.DynamicData.Handlers.ImageHandler" />
+        </handlers>
+    </system.webServer>
+</configuration>
